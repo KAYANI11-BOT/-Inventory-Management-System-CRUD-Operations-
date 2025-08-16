@@ -1,0 +1,62 @@
+body {
+    background: floralwhite;
+    font-family: Arial, sans-serif;
+}
+.container {
+    width: 600px;
+    margin: 40px auto;
+    background: #fff;
+    border-radius: 10px;
+    padding: 24px;
+    box-shadow: 0 0 10px #ccc;
+}
+h2 {
+    text-align: center;
+}
+.item-form {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 16px;
+}
+.item-form input {
+    flex: 1 1 0;
+    padding: 6px;
+    border: 1px solid #bbb;
+    border-radius: 4px;
+}
+.item-form button, .item-form .cancel-btn {
+    padding: 7px 14px;
+    border: none;
+    background: #007bff;
+    color: #fff;
+    border-radius: 4px;
+    cursor: pointer;
+    text-decoration: none;
+}
+.item-form .cancel-btn {
+    background: #dc3545;
+}
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+table th, table td {
+    border: 1px solid #ddd;
+    padding: 7px;
+    text-align: center;
+}
+table th {
+    background: #007bff;
+    color: #fff;
+}
+table tr:nth-child(even){
+    background: #f1f1f1;
+}
+a {
+    color: #007bff;
+    margin: 0 4px;
+    text-decoration: none;
+}
+a:hover {
+    text-decoration: underline;
+}

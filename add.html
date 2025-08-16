@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Add items</title>
+	<style>
+		body {
+			min-height: 100vh;
+			margin: 0;
+			padding: 0;
+			font-family: 'Segoe UI', 'Roboto', Arial, sans-serif;
+			background: url('lbg.png') no-repeat center center fixed;
+			background-size: cover;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+		}
+		.form {
+			width: 420px;
+			min-height: 440px;
+			margin: 60px auto;
+			background: rgba(255,255,255,0.95);
+			border-radius: 16px;
+			padding: 38px 34px 28px 34px;
+			box-shadow: 0 8px 32px #bbb;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+		}
+		h2 {
+			margin-bottom: 22px;
+			color: #0056b3;
+			font-size: 1.7rem;
+		}
+		.item-form {
+			width: 100%;
+			display: flex;
+			flex-direction: column;
+			gap: 16px;
+			margin-bottom: 0;
+		}
+		.item-form label {
+			text-align: left;
+			font-size: 1rem;
+			color: #274690;
+			font-weight: 500;
+			margin-bottom: 3px;
+		}
+		.item-form input {
+			padding: 11px;
+			font-size: 1.07rem;
+			border: 1.5px solid #b0b9c6;
+			border-radius: 7px;
+			background: #f7f8fa;
+			transition: border 0.18s;
+			outline: none;
+		}
+		.item-form input:focus {
+			border: 1.5px solid #007bff;
+			background: #fff;
+		}
+		.item-form button {
+			padding: 12px 0;
+			background: linear-gradient(90deg, #007bff 80%, #0056b3 140%);
+			color: #fff;
+			font-size: 1.12rem;
+			font-weight: 500;
+			border-radius: 7px;
+			border: none;
+			cursor: pointer;
+			margin-top: 18px;
+			transition: background 0.17s;
+			box-shadow: 0 0.5px 6px rgba(0,0,0,0.09);
+		}
+		.item-form button:hover {
+			background: linear-gradient(90deg, #0056b3 80%, #007bff 140%);
+		}
+		@media (max-width: 600px) {
+			.form {
+				width: 98vw;
+				padding: 18px 4vw 14px 4vw;
+			}
+		}
+	</style>
+</head>
+<body>
+	<div class="form">
+		<h2>Add Item</h2>
+		<form method="post" action="add.php" class="item-form">
+			<label for="name">Item Name</label>
+			<input type="text" id="name" name="name" placeholder="Item Name" required>
+
+			<label for="qty">Quantity</label>
+			<input type="number" id="qty" name="qty" placeholder="Quantity" required>
+
+			<label for="price">Price</label>
+			<input type="number" step="0.01" id="price" name="price" placeholder="Price" required>
+
+			<button type="submit" name="submit">Add Item</button>
+		</form>
+	</div>
+</body>
+</html>
